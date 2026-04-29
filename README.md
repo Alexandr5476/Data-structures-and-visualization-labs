@@ -14,10 +14,15 @@
 
 Поддерживаются три варианта хранения матрицы:
 - как массив массивов ([`matrix_a.c`](matrix/matrix_a.c);)
-- как массив указателей на строки ([`matrix_b.c`](matrix/matrix_b.c));
+- как массив указателей на строки матриц ([`matrix_b.c`](matrix/matrix_b.c));
 - как одномерный массив с пересчётом индексов ([`matrix_c.c`](matrix/matrix_c.c)).
 
 При сборке необходимо выбрать один из этих файлов реализации.
+
+Пример команды для компиляции программы:
+```
+gcc main.c matrix_init.c matrix_operations.c matrix_problems.c matrix_c.c -o matrix_program.exe
+```
 
 ---
 
@@ -29,8 +34,15 @@
 | ![один пример](red-black-tree/pics/b.png) | ![другой пример](red-black-tree/pics/t.png) |
 | :---: | :---: |
 
+Инструкция по использованию выводится (в стандартный поток вывода) при запуске программы.
+
 Для графики используется библиотека [OpenBGI](http://openbgi.sourceforge.net/).  
 Версию с поддержкой кириллицы можно скачать [здесь](https://csd.spbu.ru/staff/9-departament/44-ustanovka-code-blocks-mingw-i-openbgi.html).
+
+Пример команды для компиляции программы:
+```
+gcc *.c -L. -lopenbgi -lgdi32 -o red_black_tree.exe
+```
 
 ---
 
@@ -47,6 +59,13 @@
 Реализована вручую вся логика интерфейса (обработка мыши, ввод, отрисовка). Тоже используется библиотека OpenBGI.
 
 ![пример](table-editor/pics/t.png)
+
+Инструкция по использованию содержится в файле [`описание.txt`](table-editor/описание.txt)
+
+Пример команды для компиляции программы:
+```
+gcc *.c -L. -lopenbgi -lgdi32 -o street_table.exe
+```
 
 ---
 
